@@ -10,9 +10,17 @@
 # Use a loop to print the name of each river included in the dictionary.
 # Use a loop to print the name of each country included in the dictionary.
 
+# 6-6. Polling: 
+# Use the code in favorite_languages.py
+# Make a list of people who should take the favorite languages poll. I
+# nclude some names that are already in the dictionary and some that are not.
+# Loop through the list of people who should take the poll. 
+# If they have already taken the poll, print a message thanking them for responding. 
+# If they have not yet taken the poll, print a message inviting them to take the poll.
+
 
 def main():
-    six_five()
+    six_six()
 
 
 def six_four():
@@ -28,7 +36,7 @@ def six_four():
         print(f"A {term} is {description}")
 
 def six_five():
-    
+
     rivers = {
         'tejo': ['portugal', 'spain'], 
         'mississipi': 'usa', 
@@ -37,6 +45,22 @@ def six_five():
     
     for river, country in rivers.items():
         print(f"The {river.title()} runs through {country.title()}" if type(country) is str else f"The {river.title()} runs through {country[0].title()} and {country[1].title()}")
+
+def six_six():
+    favourite_languages = {
+        'Ana': 'Wordpress',
+        'Rita': 'Potato',
+        'João': 'Kotlin',
+        'Robalo': 'Python',
+    }
+
+    people = ['Ana', 'Rita', 'João', 'Robalo', 'Tiago', 'André']
+
+    for name in people:
+        if name in favourite_languages.keys():
+            print(f"Thank you for responding to the poll, {name}!")
+        else:
+            print(f"Please take the poll, {name}!")
 
 
 main()
